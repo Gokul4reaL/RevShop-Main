@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+/* General Styling for Seller Dashboard */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #222; /* Set the background color for the entire body */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.seller-dashboard {
+    padding: 2rem;
+    flex: 1; /* Allow the dashboard to take full height */
+}
+
+/* Section Title Styling */
+.seller-dashboard h1,
+.seller-dashboard h2 {
+    text-align: center;
+    color: #4af;
+}
+
+.seller-dashboard h2 {
+    color: #f8b400;
+}
+
+/* Inventory Management Section */
+.inventory-management {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.inventory-management table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventory-management th, 
+.inventory-management td {
+    padding: 0.75rem;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+.inventory-management th {
+    background-color: #333;
+    color: #f8b400;
+}
+
+.inventory-management td {
+    background-color: #2e2e2e;
+}
+
+.add-product-btn {
+    display: block;
+    margin: 0 auto 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f8b400;
+    color: #222;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-product-btn:hover {
+    background-color: #ffa500;
+}
+
+/* Placed Orders Section */
+.orders-section {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.orders-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-section th,
+.orders-section td {
+    padding: 0.75rem;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+.orders-section th {
+    background-color: #333;
+    color: #f8b400;
+}
+
+.orders-section td {
+    background-color: #2e2e2e;
+}
+
+/* Notifications Section */
+.notifications-section {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.notifications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notifications li {
+    background-color: #2e2e2e;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #f8b400;
+}
+
+/* Reviews Section */
+.reviews-section {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.reviews-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.reviews-list li {
+    background-color: #2e2e2e;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #4af;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #333; /* Dark background for modal content */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 2rem; /* Padding inside the modal */
+    border: 1px solid #444; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    width: 90%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Max width for larger screens */
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.5); /* Neon blue shadow for depth */
+}
+
+.modal h2 {
+    text-align: center;
+    color: #f8b400; /* Neon yellow for modal title */
+}
+
+.modal input {
+    width: calc(100% - 1rem); /* Full width minus padding */
+    padding: 0.5rem; /* Padding inside inputs */
+    margin-bottom: 1rem; /* Space between inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: none; /* No border on inputs */
+    background-color: #444; /* Darker background for inputs */
+    color: #fff; /* White text color for inputs */
+}
+
+.modal input::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.modal button {
+    background-color: #f8b400; /* Neon yellow for button */
+    color: #222; /* Dark text color for button */
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #ffa500; /* Lighter neon orange on hover */
+}
+
+/* Close Button Styles */
+.close {
+    color: #aaa; /* Close button color */
+    float: right;
+    font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+    color: #f8b400; /* Change close button color on hover/focus to neon yellow */
+}
+
+#loader-overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999; /* Sit on top of everything */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+        }
+
+        /* Loader style */
+        .loader {
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Spin animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }

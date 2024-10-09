@@ -1,0 +1,165 @@
+/* Body style */
+body {
+    background-color: #181818; /* Dark background */
+    font-family: 'Arial', sans-serif; /* Font style */
+    color: #f5f5f5; /* Default text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Carousel container should fill the screen height */
+.carousel {
+    height: 100vh; /* Full viewport height */
+}
+
+/* Carousel item fills the carousel */
+.carousel-item {
+    height: 100vh; /* Full height of carousel */
+    position: relative; /* Position relative for the overlay */
+}
+
+/* Overlay for dimming effect */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    z-index: 1; /* Place overlay below text but above image */
+}
+
+/* Images should cover the entire carousel while maintaining aspect ratio */
+.carousel-item img {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Cover the entire area */
+    object-position: center; /* Center the image */
+}
+
+/* Carousel captions */
+.carousel-caption {
+    position: absolute;
+    top: 55%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Center the text */
+    z-index: 10; /* Ensure captions appear above other elements */
+}
+
+/* Improved Text Styles */
+.carousel-caption h2 {
+    font-size: 4rem; /* Heading size */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase letters */
+    color: #ffdb00;
+    text-shadow: 3px 3px 10px rgba(0, 255, 255, 0.8); /* Light cyan shadow */
+}
+
+.carousel-caption p {
+    font-size: 1.5rem; /* Reduced paragraph size for better balance */
+    color: #ffcc00; /* Neon yellow */
+    text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.8); /* Yellow shadow */
+}
+
+/* Button Container Styling for Better Spacing and Alignment*/
+.role-selection {
+    margin-top: 20px; /* Space between text and buttons */
+}
+
+/* Neon Button Styles with Enhanced Hover Effects*/
+/* Neon Button Styles with Black Background and Neon Borders */
+.role-btn {
+    position: relative; /* Positioning for the glow effect */
+    background-color: black; /* Black background for the button */
+    border: 2px solid transparent; /* Transparent border initially */
+}
+
+.role-btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for glow effect */
+    filter: blur(10px);
+    z-index: -1; /* Send behind the button */
+}
+
+/* Primary Button with Neon Blue Border */
+.role-btn.btn-primary {
+    border-color: #00ccff; /* Neon blue border */
+}
+
+.role-btn.btn-primary:hover {
+    background-color: #001f33; /* Darker shade on hover */
+}
+
+/* Secondary Button with Neon Pink Border */
+.role-btn.btn-secondary {
+    border-color: #ff33cc; /* Neon pink border */
+}
+
+.role-btn.btn-secondary:hover {
+    background-color: #1a001a; /* Darker shade on hover */
+}
+
+/* Button Styles for Consistency and Spacing*/
+.role-btn {
+   padding: 12px 24px; /* Increased padding for better appearance and clickability*/
+   font-size: 1.2rem; /* Consistent font size across buttons*/
+   border-radius: 30px; /* Rounded corners for a softer look*/
+   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition effects*/
+}
+
+.role-btn:hover {
+   transform: scale(1.05); /* Slightly enlarge on hover for emphasis*/
+   box-shadow: 0px 0px 20px rgba(255,255,255,0.6); /* Glow effect on hover*/
+}
+/* Custom carousel controls with white icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; /* Make background transparent */
+    width: 4rem; /* Icon width */
+    height: 4rem; /* Icon height */
+}
+
+/* Add white background for hover effect */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+/* Use white color for the icons */
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    color: white; /* Set icon color to white */
+}
+
+/* Ensure visibility of icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: none; /* Remove any filters applied previously */
+}
+
+/* Custom indicators with enhanced design*/
+.carousel-indicators [data-bs-target] {
+   background-color: #b8ff61; /* Indicator color */
+   width: 12px; /* Width of indicator */
+   height: 12px; /* Height of indicator */
+   border-radius: 50%; /* Round shape */ 
+   transition : transform .3s ease-in-out;
+}
+
+.carousel-indicators [data-bs-target]:hover {
+   transform : scale(1.2); 
+}
+
+/* Slide animation for captions and paragraphs*/
+@keyframes fadeIn {
+   from { opacity: 0; }
+   to { opacity: 1; }
+}

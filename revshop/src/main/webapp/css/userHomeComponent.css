@@ -1,0 +1,383 @@
+@charset "UTF-8";
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark gray background */
+    color: #E0E0E0; /* Light gray text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1F1F; /* Darker gray for navbar */
+    padding: 1rem;
+    color: #E0E0E0;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4CAF50; /* Subtle green for logo */
+}
+
+.navbar .menu a {
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: #E0E0E0;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+}
+
+.navbar .menu a:hover {
+    color: #4CAF50; /* Green accent on hover */
+    outline: 1px solid #4CAF50; /* Subtle green outline */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu a.active {
+	color: #4CAF50; /* Green accent on hover */
+    outline: 1px solid #4CAF50; /* Subtle green outline */
+    border-radius: 5px;
+}
+
+/* Logout Button */
+.navbar .logout button {
+    background-color: #4CAF50; /* Muted orange for logout */
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: unset;
+    font-weight: bold;
+}
+
+.navbar .logout button:hover {
+    background-color: black; 
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #263238; /* Cool dark blue-gray for hero */
+    color: #E0E0E0;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4CAF50; /* Subtle green for hero heading */
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Products Section */
+.products-section {
+    padding: 2rem;
+    background-color: #1C1C1C; /* Dark background to make the product cards stand out */
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #4CAF50; /* Subtle green for section heading */
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.filters input {
+    padding: 0.5rem;
+    margin-right: 10px;
+    border: 1px solid #4CAF50; /* Green border for inputs */
+    border-radius: 5px; /* Rounded corners for input fields */
+    background-color: #2E2E2E; /* Dark background for input */
+    color: #E0E0E0; /* Light gray text for input */
+}
+
+.filters button {
+    background-color: #4CAF50; /* Green for filter button */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #66BB6A; /* Lighter green on hover */
+}
+
+/* Parent container of the grid */
+.products-container-wrapper {
+    display: flex;
+    justify-content: center; /* Center the grid */
+}
+
+/* Products Container */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+    max-width: 1000px; /* Set a max-width to avoid it stretching too wide */
+    justify-items: center; /* Ensure grid items are centered */
+}
+
+
+/* Product Cards */
+.product-card {
+    background-color: #2E2E2E; /* Slightly lighter dark gray */
+    border: 1px solid #4CAF50; /* Subtle green border */
+    border-radius: 15px; /* Increased border radius for a softer look */
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Change cursor to pointer to indicate clickability */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slight scale-up to grab attention */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* Increased height for a more visual impact */
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover img {
+    opacity: 0.9; /* Slight dimming effect on hover */
+}
+
+.product-info {
+    padding: 1rem;
+    text-align: center; /* Center-align text for a clean look */
+}
+
+.product-info h3 {
+    font-size: 1.4rem; /* Increased font size for better readability */
+    margin-bottom: 0.5rem;
+    color: #E0E0E0;
+}
+
+.product-info p {
+    margin-bottom: 0.5rem;
+    color: #B0BEC5; /* Lighter gray for description text */
+    font-size: 0.95rem; /* Slightly smaller font for description */
+}
+
+/* Product Actions */
+.product-actions {
+    display: flex;
+    justify-content: space-around; /* Spread buttons evenly */
+    padding: 0.5rem 0; /* Added padding for spacing */
+}
+
+.product-actions button {
+    background-color: #4CAF50; /* Subtle green for buttons */
+    color: white;
+    border: none;
+    padding: 0.20rem 1.2rem; /* Larger padding for a more substantial feel */
+    cursor: pointer;
+    border-radius: 8px; /* Softer button edges */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.product-actions .quantity-input {
+    width: 50px; /* Set a specific width for the input */
+    padding: 0.5rem; /* Adjust padding to make it more comfortable */
+    border: 1px solid #ccc; /* Optional: add a border */
+    border-radius: 5px; /* Optional: rounded corners for the input */
+}
+
+.product-actions button:hover {
+    background-color: #66BB6A; /* Lighter green on hover */
+    transform: translateY(-3px); /* Button rises slightly on hover */
+}
+
+.favorite-btn {
+    background-color: #FF5722; /* Muted orange for favorite button */
+}
+
+.favorite-btn:hover {
+    background-color: #FF7043; /* Lighter muted orange on hover */
+}
+
+/* Pagination Controls */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; /* Space above pagination */
+    margin-bottom: 30px;
+}
+
+.pagination button {
+    background-color: #4CAF50; /* Green for pagination buttons */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px; /* Rounded corners for buttons */
+    margin: 0 5px; /* Space between buttons */
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #66BB6A; /* Lighter green on hover */
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #2E2E2E; /* Dark background for modal */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px; /* Limit width for better readability */
+    width: 90%; /* Responsive width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    text-align: center; /* Center the title */
+}
+
+.review {
+    margin-bottom: 15px; /* Space between reviews */
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #E0E0E0; /* Light gray close button color */
+    font-size: 1.5rem; /* Slightly larger for better visibility */
+    cursor: pointer;
+}
+
+button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66BB6A; /* Lighter green on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1F1F1F; /* Darker gray for footer */
+    color: #E0E0E0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #B0BEC5; /* Light gray for footer text */
+}
+
+
+#loader-overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 9999; /* Sit on top of everything */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+        }
+
+        /* Loader style */
+        .loader {
+            position: absolute;
+            left: 45%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Spin animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Default empty star */
+.product-rating .fa-star {
+    color: #e4e5e9; /* Light gray for empty stars */
+    cursor: pointer; /* Cursor change for clickable stars */
+    transition: color 0.2s ease-in-out;
+}
+
+/* Filled star */
+.product-rating .fa-star.filled {
+    color: #f5c518; /* Gold for filled stars */
+}
+
+/* Hover effect for stars */
+.product-rating .fa-star:hover,
+.product-rating .fa-star:hover ~ .fa-star {
+    color: #ffb400; /* Brighter gold for hover */
+}
+        
+

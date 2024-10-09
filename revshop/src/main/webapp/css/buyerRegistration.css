@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: 0; /* Set margin to 0 for proper centering */
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: 12px;
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+button {
+    border-radius: 20px;
+    border: none; /* Removed border */
+    background-color: #FF4B2B; /* Button color */
+    color: #FFFFFF; /* Text color */
+    font-size: 12px; /* Font size */
+    font-weight: bold; /* Bold text */
+    margin-top: 10px;
+    padding: 12px 45px; /* Padding */
+    letter-spacing: 1px; /* Spacing between letters */
+    text-transform: uppercase; /* Uppercase text */
+    transition: transform 80ms ease-in, background-color 0.3s ease; /* Transition effects */
+}
+
+button:hover {
+   background-color: #FF416C; /* Change color on hover */
+}
+
+button:active {
+   transform: scale(0.95); /* Scale effect on click */
+}
+
+button.ghost {
+   background-color: transparent; /* Transparent background for ghost buttons */
+   border-color: #FFFFFF; /* White border for ghost buttons */
+   color: #FFFFFF; /* White text for ghost buttons */
+}
+
+form {
+   background-color: #FFFFFF; /* White background for forms */
+   display: flex; /* Flexbox for layout */
+   align-items: center; /* Center items vertically */
+   justify-content: center; /* Center items horizontally */
+   flex-direction: column; /* Stack items vertically */
+   padding: 0 100px; /* Padding around form */
+   height: 100%; /* Full height of container */
+   text-align: center; /* Center text in form */
+}
+
+input {
+   background-color: #eee; /* Light grey background for inputs */
+   border-radius: 5px; /* Rounded corners for inputs */
+   border: none; /* No border on inputs */
+   padding: 12px 15px; /* Padding inside inputs */
+   margin: 8px 0; /* Margin between inputs */
+   width: 100%; /* Full width of container */
+}
+
+.container {
+   background-color: #fff; /* White background for container */
+   border-radius: 10px; /* Rounded corners for container */
+   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+               0 10px 10px rgba(0,0,0,0.22); /* Shadow effect */
+   position: relative; 
+   overflow: hidden; 
+   width: 768px; 
+   max-width: 100%; 
+   min-height: 570px; 
+   display: flex; /* Use flexbox for better alignment */
+}
+
+.form-container {
+   position: absolute;
+   top: 0;
+   height: 100%;
+   transition: all .6s ease-in-out;
+   display: flex; /* Align forms correctly */
+   align-items: center; /* Center vertically */
+}
+
+.sign-in-container {
+   left: 0;
+   width: 50%;
+   z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+   transform: translateX(100%);
+}
+
+.sign-up-container {
+   left: 0;
+   width: 50%;
+   opacity: 0;
+   z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+   transform: translateX(100%);
+   opacity: 1;
+   z-index: 5;
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform .6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: #FF416C; 
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C); 
+	background: linear-gradient(to right, #FF4B2B, #FF416C); 
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position: 0 0; 
+	color: #FFFFFF; 
+	position: relative; 
+	left: -100%; 
+	height: 100%; 
+	width: 200%; 
+	transform: translateX(0); 
+	transition: transform .6s ease-in-out; 
+}
+
+.container.right-panel-active .overlay {
+	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	flex-direction: column; /* Center items vertically */
+	padding: 0 40px; 
+	text-align: center; 
+	top: 0; 
+	height: 100%; 
+	width: 50%; 
+	transform: translateX(0); 
+	transition: transform .6s ease-in-out; 
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin-top: 10%; /* Adjust top margin */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row; /* Align social icons in a row */
+	border-radius: .5em;
+	padding: .5em;
+}
+
+.social-container a {
+	border-radius: .5em;
+	border: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: .5em;
+	margin-right: .5em;
+	height: auto;
+}
+
+footer {
+	background-color: #222222; 
+	color: #fff; 
+	font-size: 14px; /* Ensure footer font size is set */
+	bottom: -30%;  
+	position: absolute;  
+	left: -10%;  
+	right: -10%;  
+	text-align: center;  
+	z-index: -9999;
+}
+
+footer p {  
+	margin-top: -30%;  
+}

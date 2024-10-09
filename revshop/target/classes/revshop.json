@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "revshop-437305",
+  "private_key_id": "d9f896cb985b1b4d1c2ca550d648c8cc6cea6733",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDGHzGGwiBJ5/v+\nWRZY0Mn+VdpSKz80rPKS2cExyiqnU3mJhqXU+TpPdWvEmpdANT1JLrFKwoPBQuNz\nITmVL7B8+7CgoFiH/YWJx9J+rcxxdXw5ISbNNLg0rWYHTb6Qo3/6m8Tp/L473/UI\nzGBqNgxrVy3EcPQYx1Cm0s621jbOONbbPpGQd2jVewnMZT2jJCEHxUZvs8HKLanK\nBWPdP5GUyO4dTAzjhHnddCaBaUrXo4Vrv6f3b3mrdplDf5uJ2bN8PLfwTSSWVMJR\nTyqUr7buCgyPnEmcoouJYkhoOnSFzcJRfHVUmzyjC/+WKC0J90/hvtpIEmNq5gJo\nno6KfKhPAgMBAAECggEAFFR9G4vuDkds11PC9EgwghXDOm1PphMdLS6FIZvSNqtd\nLFyRxcHxVtgAwALxBFiyOkE9ViORq5I2jsjZBNMI9DpLjKAHlaTRQCsuEWu6L+ZT\nYfVh6uq/AEDO2G8E4Ai3CDtVwID78F7x4P4/4oY7TgR7IM5KbgR95TB6n85pf02t\nnWpzMmhm6N1F8STXhkFQ3DfR9Ntl5ZUtFMXHAmm+yT0FcyLKBs8oKQUDSTYXWfdk\ne07eE83Hl0mzzAMIo92zScZ/AaKifx7wOVyAqPuvoec7S7ldD77/7qEuvQiMlw31\ntfNrGsYhv3/4XSz80lXCeHy2dW45TQfbVL7DagZC6QKBgQDj2NA6iV13LBb0CeWh\n/3wE0p8KmKisO8pOm6+4/iTg3OYkJ6+TDW+HiIhJuUo4sTiQ9O6c9qTnwQjxrXQb\nIqmV5zJYuahYFciVvhWq5QKmarFO88/u2Vm3VaW9ib+OhtHmRMvH8qMoTGVSgJvY\nP07+hVSUxKIKu4pLh42jJ/u2JQKBgQDemiANEbL/vH5byXkStXpjLp0vq79qovEE\nFfoptAWX+bX++wuzhd4rYybawXH/TgRit6GY0Jqg8xivoQ1+iqdCVjNDnCTQFviw\nlGpC/TSFbqS28tUKvfPp89FZ3mSbBPB8iweBe/WzDbAB98Q2qx2vfbd5Ki8cJh77\n3x7/h77YYwKBgQDbJf/qPZM7e5m8MgS/kxd7IAY+z+R0fLGyeAZFPZTE/1MQdWdn\nXmXmi4jiuChObQ7GRf9307d6/W0X30isjONmPlBrjG8CAjnC5Wi7zbeFz1spYFKg\nHkgvkV5v9pzbfotHGuaSM6uAqDJQb0j2brYRErbuvE5LWmTDDudJhbySTQKBgHqy\nwc/yXZQRNiUp3I6vcZKR8xp/tLb2sZrq8kVicWLfxa2Se1StCVUpBhW2YzuyqUAw\nr+YntdPZq1XDlEiX7LHoCcHOo4v/3XyXkirynqyd3DTrjPqq0XO3bUH4D8RS6Kv9\nhlmdFkVn2gh7pa/siiRdS3CCDA2cBaAX0GJRVKS5AoGAHGK8YiG2hzzVpaTWyV5G\nFf/wU9hfNL5pbI3KdIVHLlQdUL4l6t/076a0lSdoFwLwgxJY2j/XyLTN+dy4gQrH\nFJ669sgjoGjZigfPXH2CFhoqpN1SqmR0knYHza9fD7TL66UCxOCRTPZhf6m7IbeI\ndEEBxcnl6cp4eWWFUjVp2Zk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "revshop-admin@revshop-437305.iam.gserviceaccount.com",
+  "client_id": "114267411350033920243",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/revshop-admin%40revshop-437305.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

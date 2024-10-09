@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+    <display-name>RevShop Application</display-name>
+
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>landingComponent.jsp</welcome-file> <!-- Replace with your landing page file -->
+        <!-- You can add more welcome files if needed -->
+    </welcome-file-list>
+
+    <!-- Servlet Definition for RegisterServlet -->
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.revshop.controller.RegisterServlet</servlet-class>
+    </servlet>
+
+    <!-- Example for LoginServlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.revshop.controller.LoginServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SellerRegisterServlet</servlet-name>
+        <servlet-class>com.revshop.controller.SellerRegisterServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SellerLoginServlet</servlet-name>
+        <servlet-class>com.revshop.controller.SellerLoginServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AddProductServlet</servlet-name>
+        <servlet-class>com.revshop.controller.AddProductServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>DeleteByProductIDServlet</servlet-name>
+        <servlet-class>com.revshop.controller.DeleteByProductIDServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>EditByProductIDServlet</servlet-name>
+        <servlet-class>com.revshop.controller.EditByProductIDServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>GetByProductIDServlet</servlet-name>
+        <servlet-class>com.revshop.controller.GetByProductIDServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>GetBySellerIDServlet</servlet-name>
+        <servlet-class>com.revshop.controller.GetBySellerIDServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>GetProductsServlet</servlet-name>
+        <servlet-class>com.revshop.controller.GetProductsServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>com.revshop.controller.AddToCartServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RemoveFromCartServlet</servlet-name>
+        <servlet-class>com.revshop.controller.RemoveFromCartServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>UpdateCartQuantityServlet</servlet-name>
+        <servlet-class>com.revshop.controller.UpdateCartQuantityServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>GetCartItemsServlet</servlet-name>
+        <servlet-class>com.revshop.controller.GetCartItemsServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>GetFavoritesServlet</servlet-name>
+        <servlet-class>com.revshop.controller.GetFavoritesServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AddToFavoritesServlet</servlet-name>
+        <servlet-class>com.revshop.controller.AddToFavoritesServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RemoveFromFavoritesServlet</servlet-name>
+        <servlet-class>com.revshop.controller.RemoveFromFavoritesServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>ConfirmOrderServlet</servlet-name>
+        <servlet-class>com.revshop.controller.ConfirmOrderServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AddReviewServlet</servlet-name>
+        <servlet-class>com.revshop.controller.AddReviewServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>GetProductReviewServlet</servlet-name>
+        <servlet-class>com.revshop.controller.GetProductReviewServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>RazorPayOrderServlet</servlet-name>
+        <servlet-class>com.revshop.controller.RazorPayOrderServlet</servlet-class>
+    </servlet>
+
+</web-app>
